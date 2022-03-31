@@ -3,15 +3,6 @@ from flask import jsonify, request
 
 app = Flask(__name__)
 
-@app.after_request
-def add_header(response):
-    response.headers['Content-Type'] = 'application/json'
-    response.headers['Api-Name'] = 'Math-API'
-    response.headers['Server'] = 'Poltek-Harber.io'
-    return response
-
-#curl -i -X POST http://127.0.0.1:7092/hitung -d "berat=60&tinggi=175" -H 'Content-Type: application/json'
-
 @app.route("/hitung", methods=["POST"])
 def hitung():
     berat = float(request.form['berat'])
