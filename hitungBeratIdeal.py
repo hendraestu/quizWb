@@ -19,7 +19,7 @@ def hitung():
     else:
         ket = 'bahaya'
 
-    hasil = {'hasil': bmi, 'keterangan': ket}
+    hasil = {'hasil bmi': bmi, 'keterangan': ket}
     return jsonify(hasil)
 
 if __name__ == '__main__':
