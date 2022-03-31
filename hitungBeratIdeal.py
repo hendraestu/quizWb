@@ -3,7 +3,7 @@ from flask import jsonify, request
 
 app = Flask(__name__)
 
-@app.route("/hitung", methods=["POST"])
+@app.route("/api/v1/bmi", methods=["POST"])
 def hitung():
     berat = float(request.form['berat'])
     tinggi = float(request.form['tinggi'])
